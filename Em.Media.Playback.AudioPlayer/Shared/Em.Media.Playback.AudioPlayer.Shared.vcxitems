@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{8991f334-155e-4ec5-9f18-986ca3458b1f}</ItemsProjectGuid>
+    <ItemsRootNamespace>Em</ItemsRootNamespace>
+    <ItemsProjectName>Em.Media.Playback.AudioPlayer.Shared</ItemsProjectName>
+    <CodeSharingProject>248F659F-DAC5-46E8-AC09-60EC9FC95053</CodeSharingProject>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\AudioPlayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\RandomAccessReader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\SoundFileReader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\XAudio2SoundPlayer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\AudioPlayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\RandomAccessReader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\SoundFileReader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\XAudio2SoundPlayer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+</Project>
